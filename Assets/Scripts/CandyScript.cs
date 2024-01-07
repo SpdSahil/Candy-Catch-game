@@ -10,7 +10,7 @@ public class CandyScript : MonoBehaviour
         {
             Destroy(gameObject);
 
-            // IncrementScore();
+            GameManager.Instance.IncrementScore();
         }
         else if (collision.gameObject.tag == "Boundary")
         {
