@@ -10,7 +10,7 @@ public class CandySpawner : MonoBehaviour
     [SerializeField] private GameObject[] candies;
     [SerializeField] private bool isPlaying = true;
 
-    private static CandySpawner instance;
+    public static CandySpawner instance;
 
     private void Awake()
     {
@@ -56,11 +56,12 @@ public class CandySpawner : MonoBehaviour
     {
         if (isPlaying)
         {
-            StartCoroutine(SpawnCandies());
+            StartCoroutine("SpawnCandies");
         }
-        else
-        {
-            StopCoroutine(SpawnCandies());
-        }
+    }
+
+    public void StopSpawningCandies()
+    {
+        StopCoroutine("SpawnCandies");
     }
 }

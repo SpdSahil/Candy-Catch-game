@@ -6,7 +6,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool isMovable = true;
+    public bool isMovable = true;
 
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float maxPosition;
